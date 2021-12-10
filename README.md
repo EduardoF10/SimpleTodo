@@ -32,7 +32,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-It was a challenge being able to understand some unkwon concepts but completing the work was an easy task thanks to the instructional videos.
+It was a challenge being able to understand some unknown concepts but completing the work was an easy task thanks to the instructional videos.
 
 ## License
 
