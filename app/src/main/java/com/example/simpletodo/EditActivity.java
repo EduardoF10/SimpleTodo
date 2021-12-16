@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class EditActivity extends AppCompatActivity {
 
@@ -33,13 +34,21 @@ public class EditActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Create an intent which will contain the results
                 Intent intent = new Intent();
-                // Pass the data (results of editing)
-                intent.putExtra(MainActivity.KEY_ITEM_TEXT, etItem.getText().toString());
-                intent.putExtra(MainActivity.KEY_ITEM_POSITION, getIntent().getExtras().getInt(MainActivity.KEY_ITEM_POSITION));
-                // Set the result of the intent
-                setResult(RESULT_OK, intent);
-                // Finish activity, close the screen and go back
-                finish();
+                // Capture the text in the edit box
+                String editTextString = etItem.getText().toString();
+                // Here we add the String item to the model if and only if there is text on it
+                if (editTextString.length() >= 1) {
+                    // Pass the data (results of editing)
+                    intent.putExtra(MainActivity.KEY_ITEM_TEXT, editTextString);
+                    intent.putExtra(MainActivity.KEY_ITEM_POSITION, getIntent().getExtras().getInt(MainActivity.KEY_ITEM_POSITION));
+                    // Set the result of the intent
+                    setResult(RESULT_OK, intent);
+                    // Finish activity, close the screen and go back
+                    finish();
+                } else {
+                    // Prompts the user to enter an item if the add button was pressed with the text box empty
+                    Toast.makeText(getApplicationContext(), "Text cannot be empty", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
