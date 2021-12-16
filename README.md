@@ -4,7 +4,7 @@
 
 Submitted by: **Eduardo Fuertes**
 
-Time spent: **3.5** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
@@ -17,10 +17,11 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [x] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo list
+* [x] **Upward navigation** is implemented which allows the user to return to the logical parent screen in the app's hierarchy by pressing the "Up" button
 
 The following **improvement** features are implemented:
 
-* [x] User must enter an item before adding something to the list which fixes the problem of adding empty spaces to the list
+* [x] User must enter an item before adding or editing something on the list which fixes the problem of having empty spaces to the list
 
 ## Video Walkthrough
 
